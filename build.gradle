@@ -1,0 +1,29 @@
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+
+    // Apply the application plugin to add support for building an application
+    id 'application'
+
+    // Apply the lombok plugin
+    id 'io.freefair.lombok' version '4.0.1'
+}
+
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()
+}
+
+group = "com.github.tchlyah"
+version = "0.0.1-SNAPSHOT"
+sourceCompatibility = "11"
+
+dependencies {
+    // Use JUnit test framework
+    testImplementation "org.junit.jupiter:junit-jupiter:${junit_jupiter_version}"
+    testImplementation "org.assertj:assertj-core:${assertj_version}"
+}
+
+// Define the main class for the application
+mainClassName = 'com.github.tchlyah.search.App'
