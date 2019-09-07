@@ -23,6 +23,8 @@ dependencies {
     // Use JUnit test framework
     testImplementation "org.junit.jupiter:junit-jupiter:${junit_jupiter_version}"
     testImplementation "org.assertj:assertj-core:${assertj_version}"
+    testCompile "org.mockito:mockito-core:${mockito_version}"
+    testImplementation "org.mockito:mockito-junit-jupiter:${mockito_version}"
 }
 
 // Define the main class for the application
