@@ -1,5 +1,6 @@
-package com.github.tchlyah.search;
+package com.github.tchlyah.search.service;
 
+import com.github.tchlyah.search.util.StringUtils;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Collection;

@@ -1,5 +1,7 @@
-package com.github.tchlyah.search;
+package com.github.tchlyah.search.service;
 
+import com.github.tchlyah.search.service.Finder;
+import com.github.tchlyah.search.service.Indexer;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

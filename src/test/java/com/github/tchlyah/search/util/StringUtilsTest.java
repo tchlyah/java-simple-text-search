@@ -1,5 +1,6 @@
-package com.github.tchlyah.search;
+package com.github.tchlyah.search.util;
 
+import com.github.tchlyah.search.util.StringUtils;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

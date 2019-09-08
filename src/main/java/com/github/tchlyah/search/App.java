@@ -3,6 +3,10 @@
  */
 package com.github.tchlyah.search;
 
+import com.github.tchlyah.search.service.Finder;
+import com.github.tchlyah.search.service.Indexer;
+import com.github.tchlyah.search.util.StringUtils;
+
 import java.util.Map;
 import java.util.Scanner;
 

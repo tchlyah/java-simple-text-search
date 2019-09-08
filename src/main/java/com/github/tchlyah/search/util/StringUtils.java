@@ -1,4 +1,4 @@
-package com.github.tchlyah.search;
+package com.github.tchlyah.search.util;
 
 import java.util.Arrays;
 import java.util.Comparator;

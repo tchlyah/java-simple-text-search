@@ -1,5 +1,6 @@
-package com.github.tchlyah.search;
+package com.github.tchlyah.search.service;
 
+import com.github.tchlyah.search.service.Indexer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -21,7 +22,7 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 class IndexerTest {
 
-    public static final String SEARCH_DIR = "src/test/resources/search/";
+    static final String SEARCH_DIR = "src/test/resources/search/";
 
     @Spy
     private Indexer indexer;

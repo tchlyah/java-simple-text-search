@@ -1,4 +1,4 @@
-package com.github.tchlyah.search;
+package com.github.tchlyah.search.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Map;
 import java.util.stream.Stream;
 
-import static com.github.tchlyah.search.IndexerTest.SEARCH_DIR;
+import static com.github.tchlyah.search.service.IndexerTest.SEARCH_DIR;
 import static java.util.Map.of;
 import static org.assertj.core.api.Assertions.assertThat;
 
