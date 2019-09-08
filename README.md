@@ -43,6 +43,9 @@ $
 ## Ranking algorithm
 
 For now, the ranking algorithm is very simple:
-* It is the percentage of the found words of total words searched: ![\Large rank = \frac{n_{found}}{count} \times 100](https://latex.codecogs.com/svg.latex?rank =\frac{n_{found}}{count}\times100)
+* It is the percentage of the found words of total words searched:
+
+   ![\Large rank = \frac{n_{found}}{count} \times 100](https://latex.codecogs.com/svg.latex?rank=\frac{n_{found}}{count}\times100)
+
     * If it contains none of the words: 0%
     * If it contains all the words in any order: 100%
