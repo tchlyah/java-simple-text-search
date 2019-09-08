@@ -19,6 +19,10 @@ group = "com.github.tchlyah"
 version = "0.0.1-SNAPSHOT"
 sourceCompatibility = "11"
 
+test {
+    useJUnitPlatform()
+}
+
 dependencies {
     // Use JUnit test framework
     testImplementation "org.junit.jupiter:junit-jupiter:${junit_jupiter_version}"
@@ -29,3 +33,7 @@ dependencies {
 
 // Define the main class for the application
 mainClassName = 'com.github.tchlyah.search.App'
+
+run {
+    standardInput(System.in)
+}
