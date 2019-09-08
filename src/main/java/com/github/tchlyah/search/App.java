@@ -3,9 +3,8 @@
  */
 package com.github.tchlyah.search;
 
+import java.util.Map;
 import java.util.Scanner;
-
-import static java.lang.String.format;
 
 public class App {
 
@@ -28,7 +27,9 @@ public class App {
             if (line.equals(":quit")) {
                 break;
             }
-            finder.find(line).forEach((file, rate) -> System.out.println(format("%s : %.2f%%", file, rate * 100)));
+
+            Map<String, Double> results = finder.find(line);
+            System.out.println(StringUtils.formatResults(results));
         }
 
     }

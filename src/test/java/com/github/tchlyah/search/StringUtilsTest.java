@@ -5,6 +5,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -44,4 +45,28 @@ class StringUtilsTest {
         );
     }
 
+    @ParameterizedTest(name = "{0}")
+    @MethodSource
+    void formatResults(String description, Map<String, Double> results, String expected) {
+        assertThat(StringUtils.formatResults(results)).as(description).isEqualTo(expected);
+    }
+
+    @SuppressWarnings("unused")
+    private static Stream<Arguments> formatResults() {
+        return Stream.of(
+                Arguments.of("single result", Map.of("file_1", 1d), "file_1 : 100,00%"),
+                Arguments.of("single non null result", Map.of(
+                        "file_1", 0.5d,
+                        "file_2", 0d),
+                        "file_1 : 50,00%"),
+                Arguments.of("multiple non ordered results", Map.of(
+                        "file_1", 0.5d,
+                        "file_2", 0.75d,
+                        "file_3", 1d,
+                        "file_4", 0d),
+                        "file_3 : 100,00%\n" +
+                        "file_2 : 75,00%\n" +
+                        "file_1 : 50,00%")
+        );
+    }
 }
